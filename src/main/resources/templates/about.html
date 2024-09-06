@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+ <!--About-->
+ <section>
+<img th:src="@{img/sdg29.jpg}" style="width: 100vw; margin-top: 60px;"> 
+	
+    <div class="about" id="About">
+		<h1><span>About</span>Us</h1>
+             
+        <div class="about_main">
+
+            <div class="image">
+                <img th:src="@{/img/goal.jpg}" style="height: 273px; width: 363px;">
+            </div>
+
+            <div class="about_text">
+                <h3>What is SDG benefit?</h3>
+                <p>
+                    
+The Sustainable Development Goals (SDGs) aim to transform our world. They are a call to action to end poverty and inequality, protect the planet, and ensure that all people enjoy health, justice and prosperity. It is critical that no one is left behind.
+                </p>
+            </div>
+
+        </div>
+
+<!--        <a href="#" class="about_btn">Your Feedback</a>-->
+
+    </div>
+
+
+    <!--Gallary-->
+
+    <div class="gallary" id="Gallary" >
+        
+
+        <div class="gallary_image_box">
+            <div class="gallary_image">
+                <img th:src="@{/img/sdg24.jpg}">
+</div>
+
+            <div class="gallary_image">
+                <img th:src="@{/img/sdg29.jpg}">
+
+               </div>
+
+            <div class="gallary_image">
+                <img th:src="@{/img/logo.jpg}">
+
+                </div>
+
+            <div class="gallary_image">
+				
+                <img th:src="@{/img/sdg26.jpg}">
+
+               </div>
+
+            <div class="gallary_image">
+               <img th:src="@{/img/sdg25.jpg}">
+
+              </div>
+
+            <div class="gallary_image">
+               <img th:src="@{/img/sdg23.jpg}">
+  </div>
+
+        </div>
+
+    </div>
+    </section>
+</body>
+</html>

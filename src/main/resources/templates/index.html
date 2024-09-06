@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<section>
+		<!-- Start Slider  -->
+
+		<div id="carouselExampleCaptions" class="container carousel slide " data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" style="margin-top:100px; margin-bottom: 50px;  border-radius: 20px;">
+    <div class="carousel-item active">
+      <img src="img/sdg25.jpg" class="d-block w-100" alt="..." height="" >
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/sdg23.jpg" class="d-block w-100" alt="..." height="">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/sdg23.jpg" class="d-block w-100" alt="..." height="">
+      <div class="carousel-caption d-none d-md-block" >
+        <h5 >Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+		<!-- End Slider  -->
+
+		<!--< Start Category Module -->
+			<div class="container ">
+			<div class="row p-10" >
+				<h1 class="text-4xl text-center font-bold text-gray-800 pb-10">Our Catogries</h1>
+				<div class="col-md-2" th:each="c:${category}">
+					<div class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded ">
+						<div class="card-body text-center">
+							<img th:src="@{'img/category_img/'+${c.imageName}}" width="65%" height="140px"><br>
+							<a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none text-green-500 text-xl">[[${c.name}]]</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- End Category Module -->
+
+
+		
+
+		<!-- End Latest Product Module -->
+		  <main class="container mx-auto px-4 py-2 ">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800">Our Services</h1>
+            <p class="text-gray-600 mt-4">Explore the range of services we offer to enhance your shopping experience.</p>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-4 hover:border-green-800">
+                <img src="/img/ecom5.png" alt="Free Shipping" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Free Shipping</h2>
+                <p class="text-gray-600">We offer free shipping on all orders over $50. Enjoy hassle-free delivery to your doorstep.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-4 hover:border-green-800">
+                <img src="/img/ecom6.png" alt="24/7 Support" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">24/7 Customer Support</h2>
+                <p class="text-gray-600">Our support team is available 24/7 to assist you with any queries or issues you may have.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-4 hover:border-green-800">
+                <img src="/img/ecom7.png" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Easy Returns</h2>
+                <p class="text-gray-600">We offer a hassle-free return policy within 30 days of purchase. Your satisfaction is our priority.</p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white rounded-lg shadow-md p-6  border-4 hover:border-green-800">
+                <img src="/img/sdg27.jpg" alt="Secure Payments" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Secure Payments</h2>
+                <p class="text-gray-600">Our payment gateways are secure and encrypted, ensuring your personal information is protected.</p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-4 hover:border-green-800">
+                <img src="/img/sdg4.png" alt="Gift Wrapping" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Gift Wrapping</h2>
+                <p class="text-gray-600">We provide gift wrapping services to make your purchase extra special. Available at checkout.</p>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-4 hover:border-green-800">
+                <img src="/img/ecom1.png" alt="Membership Discounts" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Membership Discounts</h2>
+                <p class="text-gray-600">Sign up for our membership program to enjoy exclusive discounts and early access to sales.</p>
+            </div>
+        </section>
+    </main>
+    
+    
+	</section>
+</body>
+</html>

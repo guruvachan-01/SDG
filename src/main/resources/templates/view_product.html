@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container p-20" >
+
+			<div class="col-md-12 md:pl-20">
+				<div class="row">
+					<div class="col-md-4 text-end pt-3 " >
+						<img alt="" th:src="@{'/img/product_img/'+${product.image}}" width="330px"
+							height="300px">
+					</div>
+
+					<div class="col-md-6 mt-5">
+
+						<p class="fs-3">[[${product.title}]]</p>
+						<p>
+							<span class="fw-bold">Description : </span><br>[[${product.description}]]
+						</p>
+					
+
+						<div class="row">
+							<div class="col-md-4 text-success text-center p-2">
+								<i class="fas fa-money-bill-wave fa-2x"></i>
+								<p>Not wasted Food</p>
+							</div>
+							<div class="col-md-4 text-danger text-center p-2">
+								<i class="fas fa-undo-alt fa-2x"></i>
+								<p>All time Available</p>
+							</div>
+							<div class="col-md-4 text-primary text-center p-2">
+								<i class="fas fa-truck-moving fa-2x"></i>
+								<p>Free Service</p>
+							</div>
+						</div>
+
+						<div class="row text-center">
+													
+													<a th:href="@{/order}"
+														class="btn btn-primary col-md-4 offset-md-4">
+								Order Now</a>
+												</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+</body>
+</html>

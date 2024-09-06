@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container-fluid mt-5 p-5 ">
+			<div class="row">
+				<div class="col-md-8 offset-md-1 ">
+
+					<p class="fs-3 text-center">My Profile</p>
+					
+					<hr style="  color:rgb(0, 64, 0);">
+					
+					<div class=" offset-md-2 mt-4">
+						<table class="table table-borderless">
+
+							<tbody th:each="p,c:${user}">
+								<form>
+									<img alt="" th:src="@{'../img/profile_img/'+${user.profileImage}}"
+							class="border p-2"
+							style="width: 110px; height: 110px; border-radius: 50%; ">
+				
+								<tr>
+									<th scope="row">Name</th>
+									<td>:</td>
+									<td>[[${p.name}]]</td>
+								</tr>
+								<tr>
+									<th scope="row">Mobile Number</th>
+									<td>:</td>
+									<td>[[${p.mobileNumber}]]</td>
+								</tr>
+								<tr>
+									<th scope="row">Email</th>
+									<td>:</td>
+									<td>[[${p.email}]]</td>
+								</tr>
+								<tr>
+									<th scope="row">Address</th>
+									<td>:</td>
+									<td>[[${p.address}]]</td>
+								</tr>
+								<tr>
+									<th scope="row">City</th>
+									<td>:</td>
+									<td>[[${p.city}]]</td>
+								</tr>
+								<tr>
+									<th scope="row">State</th>
+									<td>:</td>
+									<td>[[${p.state}]]</td>
+								</tr>
+								<tr>
+									<th scope="row">Pincode</th>
+									<td>:</td>
+									<td>[[${p.pincode}]]</td>
+								</tr>
+								
+								<tr>
+									<th scope="row">Role</th>
+									<td>:</td>
+									<td>[[${p.role}]]</td>
+								</tr>
+								
+
+								
+								</form>
+							</tbody>
+						</table>
+
+					</div>
+
+				</div>
+				
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+	</section>
+</body>
+</html>
